@@ -1,0 +1,149 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home" style="background:#DE918A">
+		<div data-role="header" data-theme="b">
+			<h1>경성대 소개 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="images/kyungsungLogo.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">경성대 소개</a></li>
+				<li><a href="#movie" data-rel="dialog">경성대 홍보 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">경성대 교가와 4K영상</a></li>
+				<li><a href="#gallery">경성대 사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과 강민세</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>경성대 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="images/kyungsungBuilding.jpg" width="100px" height="100px">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>역사</h3>
+					<p>신사참배, 황민화운동, 민족정신말살에 앞장섰던 친일파 거물급 목사 김길창(金吉昌)이 개신교 정신을 바탕으로 한 교육자 양성을 목적으로 1955년 5월에 경남사범대학숙을 설립하였다. 1963년 한성여자실업초급대학으로 개편되었고, 1979년 부산산업대학으로 승격되어 11개 학과를 설치하였다.
+						1983년에 종합대학으로 개편되어 5개 단과대학에 39개 학과 2,230명을 모집하였다. 1988년 부산산업대학교에서 현재의 경성대학교로 교명을 변경하였다.</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>캠퍼스 지도</h3>
+					<iframe src="https://kscms.ks.ac.kr/kor/CMS/CampusMgr/list.do?mCode=MN041" width="1000px" height="500px"></iframe>
+				</div>
+				<div data-role="collapsible" >
+					<h3>상징물 및 해설</h3>
+					<img src="images/color.jpg" width="49%" height="400px">
+					<img src="images/symbol.jpg" width="50%" height="400px">
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과 강민세</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>경성대 홍보 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">경성대학교 공식 홍보 영상</div><br/>
+			<li><iframe width="100%" height="240" src="https://www.youtube.com/embed/sxosP7m_fCc" 
+				title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+				clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li><br/>
+			<div class="ui-bar ui-bar-a">올해 경성대 입학전형을 알아보자!🙋‍♂️🙋‍♀️ㅣ2023학년도 경성대학교 입학설명회</div><br/>
+			<li><iframe width="100%" height="240" src="https://www.youtube.com/embed/0nEKDifWQKs"
+				title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+				clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>경성대 교가</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">교가와 악보</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="KS_UNIV_SONG.mp3" type="audio/mp3">
+			</audio>	
+			<img src="images/musicSheet.jpg" alt="경성대 교가 악보" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>경성대 4K 영상</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">드론 영상</div><br/>
+			<iframe width="100%" height="240" src="https://www.youtube.com/embed/oMUUy2NaCA4" 
+			title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+			clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>경성대 갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="images/1.jpg" rel="external"><img src="images/1.jpg" /></a></li>	
+				<li><a href="images/2.jpg" rel="external"><img src="images/2.jpg" /></a></li>	
+				<li><a href="images/3.jpg" rel="external"><img src="images/3.jpg" /></a></li>	
+				<li><a href="images/4.jpg" rel="external"><img src="images/4.jpg" /></a></li>	
+				<li><a href="images/5.jpg" rel="external"><img src="images/5.jpg" /></a></li>	
+				<li><a href="images/6.jpg" rel="external"><img src="images/6.jpg" /></a></li>	
+				<li><a href="images/7.jpg" rel="external"><img src="images/7.jpg" /></a></li>	
+				<li><a href="images/8.jpg" rel="external"><img src="images/8.jpg" /></a></li>	
+				<li><a href="images/9.jpg" rel="external"><img src="images/9.jpg" /></a></li>	 
+				<li><a href="images/10.jpg" rel="external"><img src="images/10.jpg" /></a></li>    
+				<li><a href="images/11.jpg" rel="external"><img src="images/11.jpg" /></a></li>   
+				<li><a href="images/12.jpg" rel="external"><img src="images/12.jpg" /></a></li>
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>컴퓨터공학과 강민세</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
